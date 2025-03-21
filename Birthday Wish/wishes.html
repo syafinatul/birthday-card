@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fancy Birthday Wishes">
+    <title>💝 Special Birthday Wishes 💝</title>
+
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Arial', sans-serif;
+            background: url('myLove.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        /* Wishes Card */
+        .wish-card {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            text-align: center;
+            padding: 40px;
+            max-width: 500px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Title */
+        .wish-card h1 {
+            color: #ff4081;
+            font-size: 30px;
+            margin: 0 0 20px;
+            animation: popIn 0.8s ease-out;
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Message */
+        .wish-card p {
+            color: #333;
+            font-size: 20px;
+            margin: 0 0 20px;
+            line-height: 1.6;
+        }
+
+        /* YouTube Player */
+        #youtube-player {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wish-card">
+        <h1>💝 Happy Birthday, Cinta Hati! 💝</h1>
+        <p>Semoga semakin meningkat usia awak semakin awak panjang umur, dimurahkan rezeki, bertambah handsome dan bertambah kaya raya menjadi jutawan..hehe...Semoga di tahun ini baik-baik sahaja sepanjang perjalanan awak dalam bidang pekerjaan dan bidang rumah tangga yang bakal dibangunkan...Semoga hubungan kita berkekalan hingga akhir hayat ke anak cucu cicit dan seangkatan dengannya...Please take note that you are my love, my sunshine and my everything! 🌻 Love you always! 💕</p>
+
+        <!-- YouTube Video -->
+        <div id="youtube-player">
+            <iframe id="yt-iframe" width="0" height="0" frameborder="0" allow="autoplay"></iframe>
+        </div>
+    </div>
+
+    <script>
+        const videoId = '8QF9hM1MQwc'; // Your YouTube video ID
+
+        // Auto-play the song when page loads
+        window.onload = () => {
+            const iframe = document.getElementById('yt-iframe');
+            iframe.width = "0";
+            iframe.height = "0";
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&loop=1&playlist=${videoId}`;
+        };
+    </script>
+
+</body>
+
+</html>
